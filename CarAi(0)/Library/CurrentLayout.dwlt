@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 67
+  controlID: 47
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 471}
   m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 65
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 471}
   m_MaxSize: {x: 14006, y: 14021}
   vertical: 0
-  controlID: 66
+  controlID: 46
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,13 +296,12 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/Scripts
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\mateu\Downloads\CarAi(0)
+  m_LastProjectPath: "C:\\Users\\mateu\\Documents\\In\u017Cynierka\\CarAi(0)"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
@@ -336,7 +335,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000462600005a2600005c26000066260000822600008426000088260000a4260000a8260000ce260000dc280000de280000e0280000e2280000e4280000e6280000e8280000ea280000
+    m_ExpandedIDs: a8eeffff00000000462600005a2600005c26000066260000822600008426000088260000a4260000a8260000ce260000dc280000de280000e0280000e2280000e4280000e6280000e8280000ea280000f4280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -452,9 +451,9 @@ MonoBehaviour:
     height: 483
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 54270000
-    m_LastClickedID: 10068
-    m_ExpandedIDs: 1afcffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 1afcffff00000000a6270000b42700000e28000064280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -509,9 +508,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.292895, y: 55.982224, z: -15.512291}
+    m_Target: {x: -17.613726, y: 14.313646, z: -7.8091893}
     speed: 2
-    m_Value: {x: -4.292895, y: 55.982224, z: -15.512291}
+    m_Value: {x: -17.613726, y: 14.313646, z: -7.8091893}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -534,9 +533,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.44963095, y: -0.07223724, z: 0.036512956, w: 0.8895396}
+    m_Target: {x: 0.11116894, y: 0.75504446, z: -0.13272838, w: 0.63240206}
     speed: 2
-    m_Value: {x: 0.44963095, y: -0.07223724, z: 0.036512956, w: 0.8895396}
+    m_Value: {x: 0.11116895, y: 0.7550445, z: -0.1327284, w: 0.6324021}
   m_Size:
     m_Target: 0.49256536
     speed: 2
