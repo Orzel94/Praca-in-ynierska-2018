@@ -20,8 +20,8 @@ MonoBehaviour:
   m_ShowMode: 0
   m_Title: 
   m_RootView: {fileID: 5}
-  m_MinSize: {x: 230, y: 372}
-  m_MaxSize: {x: 10000, y: 14022}
+  m_MinSize: {x: 230, y: 394}
+  m_MaxSize: {x: 10000, y: 14044}
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -62,8 +62,8 @@ MonoBehaviour:
     y: 503
     width: 1906
     height: 523
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 100, y: 122}
+  m_MaxSize: {x: 4000, y: 4022}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -114,10 +114,10 @@ MonoBehaviour:
     y: 0
     width: 1906
     height: 1026
-  m_MinSize: {x: 230, y: 372}
-  m_MaxSize: {x: 10000, y: 14022}
+  m_MinSize: {x: 230, y: 394}
+  m_MaxSize: {x: 10000, y: 14044}
   vertical: 1
-  controlID: 33
+  controlID: 83
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 221}
   m_MaxSize: {x: 12008, y: 4021}
   vertical: 0
-  controlID: 9
+  controlID: 159
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,8 +298,8 @@ MonoBehaviour:
     y: 0
     width: 1346
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -371,20 +371,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Cars
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Cars
+  - Assets/CAR
+  - Assets/Racing Cars Pack 1
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\mateu\\Documents\\In\u017Cynierka\\Urban Traffic
     Simulator"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 98330000
-    m_LastClickedID: 13208
-    m_ExpandedIDs: 000000002a2600003226000040260000de27000080280000d428000032290000542c0000c22c0000ea2d0000142e0000683100008431000094340000d03500000838000000ca9a3bffffff7f
+    m_SelectedIDs: 2a260000
+    m_LastClickedID: 9770
+    m_ExpandedIDs: 000000002a2600003226000040260000de2700008e280000e228000040290000702c0000ec2c0000142e00003e2e0000ae310000ce310000de3400001a3600009639000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -412,7 +413,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002a2600003226000040260000de270000d428000032290000542c0000c22c0000ea2d0000142e0000683100008431000094340000d035000008380000
+    m_ExpandedIDs: 000000002a2600003226000040260000de2700008e280000e228000040290000702c0000ec2c0000142e00003e2e0000ae310000ce310000de3400001a36000096390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -439,7 +440,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300005e3d000090400000de3e000030410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -527,10 +528,10 @@ MonoBehaviour:
     width: 295
     height: 926
   m_TreeViewState:
-    scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: b2e4fdff
-    m_LastClickedID: -138062
-    m_ExpandedIDs: e84cfdff4850fdff5c53fdff2c57fdff6264fdfffcdffdff50e2fdffb2e4fdffc6e6fdffeae8fdff18fcffff1afcffff000000000e3600004e360000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -585,9 +586,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 37.986618, y: 23.02282, z: 47.08587}
+    m_Target: {x: 38.55203, y: 23.179209, z: 47.804676}
     speed: 2
-    m_Value: {x: 37.986618, y: 23.02282, z: 47.08587}
+    m_Value: {x: 38.55203, y: 23.179209, z: 47.804676}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -610,9 +611,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.6422852, y: -0.006189708, z: 0.0051868446, w: 0.7664232}
+    m_Target: {x: -0.619373, y: -0.06294489, z: 0.049920708, w: -0.7809757}
     speed: 2
-    m_Value: {x: 0.6422852, y: -0.006189708, z: 0.0051868446, w: 0.7664232}
+    m_Value: {x: -0.619373, y: -0.06294489, z: 0.049920708, w: -0.7809757}
   m_Size:
     m_Target: 14.38623
     speed: 2
