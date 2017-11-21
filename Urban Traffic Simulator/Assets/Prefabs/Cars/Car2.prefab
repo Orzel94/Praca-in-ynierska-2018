@@ -598,12 +598,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  maxSteerAngle: 40
+  maxSteerAngle: 45
   wheelFL: {fileID: 146601608591115878}
   wheelFR: {fileID: 146368185964466166}
-  maxMotorTorque: 150
+  maxMotorTorque: 600
   currentSpeed: 0
-  maxSpeed: 20
+  maxSpeed: 50
   centerOfMass: {x: 0, y: 0, z: 0}
 --- !u!114 &114719406421602352
 MonoBehaviour:
