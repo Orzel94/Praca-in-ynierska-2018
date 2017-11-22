@@ -108,6 +108,11 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!146 &135897489 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146636575649708826, guid: 51d784e5212dd1745afd1ce42fe6a570,
+    type: 2}
+  m_PrefabInternal: {fileID: 768921068}
 --- !u!1 &170493185
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +158,7 @@ Transform:
   - {fileID: 2002870234}
   - {fileID: 1382760345}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223542960
 GameObject:
@@ -308,11 +313,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4443038688608372, guid: 2ac47e79cede9204b8349024f64f9872, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1428759346353134, guid: 2ac47e79cede9204b8349024f64f9872, type: 2}
       propertyPath: m_Name
       value: Car5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846636812076070, guid: 2ac47e79cede9204b8349024f64f9872,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846636812076070, guid: 2ac47e79cede9204b8349024f64f9872,
+        type: 2}
+      propertyPath: frontSensorPosition
+      value: 4.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ac47e79cede9204b8349024f64f9872, type: 2}
@@ -354,15 +369,25 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4176377482145530, guid: f90d5b1a57b87594e81f764ef57e454a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1129932027326656, guid: f90d5b1a57b87594e81f764ef57e454a, type: 2}
       propertyPath: m_Name
       value: Car8
       objectReference: {fileID: 0}
+    - target: {fileID: 114630840387224966, guid: f90d5b1a57b87594e81f764ef57e454a,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f90d5b1a57b87594e81f764ef57e454a, type: 2}
   m_IsPrefabParent: 0
+--- !u!146 &532422694 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146368377441731326, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+    type: 2}
+  m_PrefabInternal: {fileID: 707474321}
 --- !u!1001 &630634218
 Prefab:
   m_ObjectHideFlags: 0
@@ -400,11 +425,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4759324694143354, guid: 366653f334400134f940a17154bc88df, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1716108000118094, guid: 366653f334400134f940a17154bc88df, type: 2}
       propertyPath: m_Name
       value: Car6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114442172446877916, guid: 366653f334400134f940a17154bc88df,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 366653f334400134f940a17154bc88df, type: 2}
@@ -426,7 +456,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4267456181026662, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 64.4
+      value: 64.35
       objectReference: {fileID: 0}
     - target: {fileID: 4267456181026662, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -446,13 +476,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4267456181026662, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114546714725463998, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
         type: 2}
       propertyPath: path
       value: 
       objectReference: {fileID: 170493187}
+    - target: {fileID: 114546714725463998, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+        type: 2}
+      propertyPath: wheelRR
+      value: 
+      objectReference: {fileID: 902300854}
+    - target: {fileID: 114546714725463998, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+        type: 2}
+      propertyPath: wheelRL
+      value: 
+      objectReference: {fileID: 532422694}
+    - target: {fileID: 114546714725463998, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546714725463998, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+        type: 2}
+      propertyPath: frontSensorPosition
+      value: 4.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f, type: 2}
   m_IsPrefabParent: 0
@@ -566,7 +616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 50, y: 146.86, z: 0}
 --- !u!1001 &768921068
 Prefab:
@@ -605,16 +655,41 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4027829076232082, guid: 51d784e5212dd1745afd1ce42fe6a570, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114687744789188072, guid: 51d784e5212dd1745afd1ce42fe6a570,
         type: 2}
       propertyPath: path
       value: 
       objectReference: {fileID: 170493187}
+    - target: {fileID: 114687744789188072, guid: 51d784e5212dd1745afd1ce42fe6a570,
+        type: 2}
+      propertyPath: wheelRR
+      value: 
+      objectReference: {fileID: 135897489}
+    - target: {fileID: 114687744789188072, guid: 51d784e5212dd1745afd1ce42fe6a570,
+        type: 2}
+      propertyPath: wheelRL
+      value: 
+      objectReference: {fileID: 1557288347}
+    - target: {fileID: 114687744789188072, guid: 51d784e5212dd1745afd1ce42fe6a570,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114687744789188072, guid: 51d784e5212dd1745afd1ce42fe6a570,
+        type: 2}
+      propertyPath: frontSensorPosition
+      value: 4.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51d784e5212dd1745afd1ce42fe6a570, type: 2}
   m_IsPrefabParent: 0
+--- !u!146 &902300854 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146967739000882262, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+    type: 2}
+  m_PrefabInternal: {fileID: 707474321}
 --- !u!1001 &953216785
 Prefab:
   m_ObjectHideFlags: 0
@@ -624,7 +699,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4579652612861044, guid: c1fae5a734f9f66409f048b5aaf421ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 17.751043
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 4579652612861044, guid: c1fae5a734f9f66409f048b5aaf421ba, type: 2}
       propertyPath: m_LocalPosition.y
@@ -652,13 +727,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4579652612861044, guid: c1fae5a734f9f66409f048b5aaf421ba, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
         type: 2}
       propertyPath: path
       value: 
       objectReference: {fileID: 170493187}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: wheelRL
+      value: 
+      objectReference: {fileID: 2089318898}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: wheelRR
+      value: 
+      objectReference: {fileID: 1559070854}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: frontSensorPosition
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: maxMotorTorque
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1fae5a734f9f66409f048b5aaf421ba, type: 2}
   m_IsPrefabParent: 0
@@ -800,7 +905,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1248769695
 GameObject:
@@ -918,6 +1023,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1356031307}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!146 &1369618488 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146458692689457012, guid: 4d786cb56906cb24dabdf002e2fdea12,
+    type: 2}
+  m_PrefabInternal: {fileID: 1799593966}
 --- !u!1 &1382760344
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +1075,78 @@ MonoBehaviour:
   nextNode1: {fileID: 1248769695}
   nextNode2: {fileID: 0}
   nextNode3: {fileID: 0}
+--- !u!1001 &1447495907
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.000000092293526
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 65.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!146 &1557288347 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146533036941464258, guid: 51d784e5212dd1745afd1ce42fe6a570,
+    type: 2}
+  m_PrefabInternal: {fileID: 768921068}
+--- !u!146 &1559070854 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146410151668612100, guid: c1fae5a734f9f66409f048b5aaf421ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 953216785}
 --- !u!1 &1653653494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,7 +1346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1779174852
 GameObject:
@@ -1272,11 +1454,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4318580762649838, guid: 4d786cb56906cb24dabdf002e2fdea12, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1635168635407750, guid: 4d786cb56906cb24dabdf002e2fdea12, type: 2}
       propertyPath: m_Name
       value: Car4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114854900751898338, guid: 4d786cb56906cb24dabdf002e2fdea12,
+        type: 2}
+      propertyPath: wheelRL
+      value: 
+      objectReference: {fileID: 1369618488}
+    - target: {fileID: 114854900751898338, guid: 4d786cb56906cb24dabdf002e2fdea12,
+        type: 2}
+      propertyPath: wheelRR
+      value: 
+      objectReference: {fileID: 1970145219}
+    - target: {fileID: 114854900751898338, guid: 4d786cb56906cb24dabdf002e2fdea12,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d786cb56906cb24dabdf002e2fdea12, type: 2}
@@ -1318,15 +1515,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4459514804306140, guid: 037dc9116ce1c314ba6bd31bca9718e0, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1871764016609788, guid: 037dc9116ce1c314ba6bd31bca9718e0, type: 2}
       propertyPath: m_Name
       value: Car7
       objectReference: {fileID: 0}
+    - target: {fileID: 114519894173419656, guid: 037dc9116ce1c314ba6bd31bca9718e0,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114519894173419656, guid: 037dc9116ce1c314ba6bd31bca9718e0,
+        type: 2}
+      propertyPath: frontSensorPosition
+      value: 4.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 037dc9116ce1c314ba6bd31bca9718e0, type: 2}
   m_IsPrefabParent: 0
+--- !u!146 &1970145219 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146050721254845766, guid: 4d786cb56906cb24dabdf002e2fdea12,
+    type: 2}
+  m_PrefabInternal: {fileID: 1799593966}
 --- !u!1 &2002870233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1655,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088581169}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!146 &2089318898 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146820112212539346, guid: c1fae5a734f9f66409f048b5aaf421ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 953216785}
 --- !u!1 &2097745628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1776,26 @@ Prefab:
     - target: {fileID: 1603272827432524, guid: e771f9ab33f00fc45b0a81cbe1877904, type: 2}
       propertyPath: m_Name
       value: EYEmaginaryCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366627138125174, guid: e771f9ab33f00fc45b0a81cbe1877904,
+        type: 2}
+      propertyPath: maxMotorTorque
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366627138125174, guid: e771f9ab33f00fc45b0a81cbe1877904,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366627138125174, guid: e771f9ab33f00fc45b0a81cbe1877904,
+        type: 2}
+      propertyPath: sensorLenght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366627138125174, guid: e771f9ab33f00fc45b0a81cbe1877904,
+        type: 2}
+      propertyPath: frontSensorPosition
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e771f9ab33f00fc45b0a81cbe1877904, type: 2}
