@@ -117,7 +117,7 @@ MonoBehaviour:
   m_MinSize: {x: 230, y: 372}
   m_MaxSize: {x: 10000, y: 14022}
   vertical: 1
-  controlID: 42
+  controlID: 66
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 221}
-  m_MaxSize: {x: 12006, y: 4021}
+  m_MinSize: {x: 683, y: 221}
+  m_MaxSize: {x: 12008, y: 4021}
   vertical: 0
-  controlID: 135
+  controlID: 161
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 297
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -276,10 +276,10 @@ MonoBehaviour:
     y: 0
     width: 1643
     height: 947
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 136
+  controlID: 10
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -371,20 +371,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/LowPolyStreetPack/Prefabs/StreetProps/RoadBlocks
+    - Assets/Scripts/PathFinding
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/LowPolyStreetPack/Prefabs/StreetProps/RoadBlocks
+  - Assets/Scripts/PathFinding
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\mateu\\Documents\\In\u017Cynierka\\Urban Traffic
     Simulator"
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 64}
-    m_SelectedIDs: d0310000
-    m_LastClickedID: 12752
-    m_ExpandedIDs: 00000000322600003a26000048260000e627000096280000ea28000048290000782c0000f42c00001c2e0000462e0000b6310000d6310000e634000004350000223600008639000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 602f0000
+    m_LastClickedID: 12128
+    m_ExpandedIDs: 000000002a2600003226000040260000de2700008e280000e228000040290000702c0000142e00003e2e0000ae310000ce310000de340000fc3400001a360000de39000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -412,7 +412,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000322600003a26000048260000e627000096280000ea28000048290000782c0000f42c00001c2e0000462e0000b6310000d6310000e63400002236000086390000
+    m_ExpandedIDs: 000000002a2600003226000040260000de2700008e280000e228000040290000702c0000142e00003e2e0000ae310000ce310000de340000fc3400001a360000de390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -527,10 +527,10 @@ MonoBehaviour:
     width: 295
     height: 926
   m_TreeViewState:
-    scrollPos: {x: 0, y: 67}
-    m_SelectedIDs: 78360000
-    m_LastClickedID: 13944
-    m_ExpandedIDs: def9ffff2afaffff2cfaffff76faffff82faffffccfaffffd8faffff2cfbffffcafbffff18fcffff1afcffff00000000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 1cfbffff
+    m_LastClickedID: -1252
+    m_ExpandedIDs: 5af9ffff5cf9ffff04faffff1cfbffffc4fbffff1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -585,9 +585,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.094942816, y: 60.731373, z: 51.981712}
+    m_Target: {x: 75.358734, y: -135.24695, z: 26.212856}
     speed: 2
-    m_Value: {x: -0.094942816, y: 60.731373, z: 51.981712}
+    m_Value: {x: 75.358734, y: -135.24695, z: 26.212856}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -610,13 +610,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.36203274, y: -0.6105052, z: 0.3679484, w: -0.60069096}
+    m_Target: {x: -0.110857494, y: -0.77474225, z: 0.6061421, w: -0.14169297}
     speed: 2
-    m_Value: {x: -0.36203274, y: -0.6105052, z: 0.3679484, w: -0.60069096}
+    m_Value: {x: -0.110857494, y: -0.77474225, z: 0.6061421, w: -0.14169297}
   m_Size:
-    m_Target: 14.558643
+    m_Target: 185.31073
     speed: 2
-    m_Value: 14.558643
+    m_Value: 185.31073
   m_Ortho:
     m_Target: 0
     speed: 2
