@@ -25,6 +25,9 @@ public class CarEngine : MonoBehaviour {
     public Vector3 frontSensorPosition = new Vector3(0f, 1f, 4f);
     public float frontSideSensorPosition = 1.5f;
     public float frontSensorAngle = 30f;
+    [Header("Cameras")]
+    public GameObject tpc;
+    public GameObject fpc;
     // Use this for initialization
     void Start () {
         GetComponent<Rigidbody>().centerOfMass = centerOfMass;
@@ -38,6 +41,8 @@ public class CarEngine : MonoBehaviour {
                 nodes.Add(pathTransforms[i]);
             }
         }
+        fpc.GetComponent<Camera>().enabled = false;
+        tpc.GetComponent<Camera>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -56,6 +61,35 @@ public class CarEngine : MonoBehaviour {
 
         CheckWayPointDistance();
 	}
+    private void OnMouseDown()
+    {
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().enabled = false;
+        fpc.GetComponent<Camera>().enabled = true;
+    }
+    private void Update()
+    {
+        if (tpc.GetComponent<Camera>().enabled || fpc.GetComponent<Camera>().enabled)
+        {
+            if (Input.GetKeyDown("c"))
+            {
+                SwitchCamera();
+            }
+        }
+    }
+
+    private void SwitchCamera()
+    {
+        if (fpc.GetComponent<Camera>().enabled)
+        {
+            fpc.GetComponent<Camera>().enabled = false;
+            tpc.GetComponent<Camera>().enabled = true;
+        }
+        else
+        {
+            fpc.GetComponent<Camera>().enabled = true;
+            tpc.GetComponent<Camera>().enabled = false;
+        }
+    }
 
     private void Sensonrs()
     {
