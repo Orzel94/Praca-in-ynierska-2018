@@ -79,15 +79,23 @@ public class CarEngine : MonoBehaviour {
 
     private void SwitchCamera()
     {
+        Camera[] cameras = new Camera[200];
+        Camera.GetAllCameras(cameras);
         if (fpc.GetComponent<Camera>().enabled)
         {
-            fpc.GetComponent<Camera>().enabled = false;
             tpc.GetComponent<Camera>().enabled = true;
+            foreach (var item in cameras)
+            {
+                item.enabled = false;
+            }
         }
         else
         {
             fpc.GetComponent<Camera>().enabled = true;
-            tpc.GetComponent<Camera>().enabled = false;
+            foreach (var item in cameras)
+            {
+                item.enabled = false;
+            }
         }
     }
 
