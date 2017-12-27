@@ -5,6 +5,7 @@ using UnityEngine;
 public class PathScript : MonoBehaviour {
 
     public Color lineColor;
+    public GameObject startPoint;
 
     private List<Transform> nodes = new List<Transform>();
 

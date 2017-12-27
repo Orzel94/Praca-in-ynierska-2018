@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Car concept.unity
+    guid: 2d6f49f9faff32344899e44e93586ce9
+  - enabled: 0
+    path: Assets/RockVR/Video/Demo/Demo_04_VideoLiveCapture.unity
+    guid: c27cd24a7b8e9124db97567624f08b97
+  - enabled: 0
+    path: Assets/RockVR/Video/Demo/Demo_01_VideoCapture.unity
+    guid: d1653b4ff1171f44d832497f2d11b0fc
