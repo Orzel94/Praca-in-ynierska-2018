@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  maxSteerAngle: 45
+  maxSteerAngle: 60
   wheelFL: {fileID: 146592398309418484}
   wheelFR: {fileID: 146479396959159910}
   wheelRL: {fileID: 146368377441731326}
@@ -785,7 +785,7 @@ MonoBehaviour:
   maxMotorTorque: 600
   maxBreakingTorque: 1200
   currentSpeed: 0
-  maxSpeed: 50
+  maxSpeed: 40
   centerOfMass: {x: 0, y: -0.2, z: 0}
   isBreaking: 0
   sensorLenght: 10

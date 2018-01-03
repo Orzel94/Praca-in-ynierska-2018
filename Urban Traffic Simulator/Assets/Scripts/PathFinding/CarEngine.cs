@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CarEngine : MonoBehaviour {
-    public Transform path;
+    public GameObject path;
     public float maxSteerAngle = 45f;
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
@@ -28,19 +28,15 @@ public class CarEngine : MonoBehaviour {
     [Header("Cameras")]
     public GameObject tpc;
     public GameObject fpc;
+
+
+    private PathScript pathScript;
+    private GameObject node;
     // Use this for initialization
     void Start () {
         GetComponent<Rigidbody>().centerOfMass = centerOfMass;
-        Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
-        nodes = new List<Transform>();
-
-        for (int i = 0; i < pathTransforms.Length; i++)
-        {
-            if (pathTransforms[i] != path.transform)
-            {
-                nodes.Add(pathTransforms[i]);
-            }
-        }
+        pathScript = path.GetComponent<PathScript>();
+        node = pathScript.startPoint;
         fpc.GetComponent<Camera>().enabled = false;
         tpc.GetComponent<Camera>().enabled = false;
     }
@@ -152,16 +148,85 @@ public class CarEngine : MonoBehaviour {
 
     private void CheckWayPointDistance()
     {
-        if (Vector3.Distance(transform.position, nodes[currentNode].position)<1.5f)
+        if (Vector3.Distance(transform.position, node.transform.position) < 1.5f)
         {
-            if (currentNode==nodes.Count-1)
+            int i = 0;
+            System.Random rnd = new System.Random();
+            int mode = 0;
+            if (node.GetComponent<Node>().nextNode1 != null) mode += 1;
+            if (node.GetComponent<Node>().nextNode2 != null) mode += 10;
+            if (node.GetComponent<Node>().nextNode3 != null) mode += 100;
+            if (mode == 000)
             {
-                currentNode = 0;
+                DestroyObject(this);
             }
-            else
+            if (mode == 001)
             {
-                currentNode++;
+                node = node.GetComponent<Node>().nextNode1;
             }
+            if (mode == 010)
+            {
+                node = node.GetComponent<Node>().nextNode2;
+            }
+            if (mode == 100)
+            {
+                node = node.GetComponent<Node>().nextNode3;
+            }
+            if (mode == 011)
+            {
+                i = rnd.Next(1, 3);
+                if (i == 1)
+                {
+                    node = node.GetComponent<Node>().nextNode1;
+                }
+                else if (i == 2)
+                {
+                    node = node.GetComponent<Node>().nextNode2;
+                }
+
+            }
+            if (mode == 101)
+            {
+                i = rnd.Next(1, 3);
+                if (i == 1)
+                {
+                    node = node.GetComponent<Node>().nextNode1;
+                }
+                else if (i == 2)
+                {
+                    node = node.GetComponent<Node>().nextNode3;
+                }
+            }
+            if (mode == 110)
+            {
+                i = rnd.Next(1, 3);
+                if (i == 1)
+                {
+                    node = node.GetComponent<Node>().nextNode2;
+                }
+                else if (i == 2)
+                {
+                    node = node.GetComponent<Node>().nextNode3;
+                }
+
+            }
+            if (mode == 111)
+            {
+                i = rnd.Next(1, 4);
+                if (i == 1)
+                {
+                    node = node.GetComponent<Node>().nextNode1;
+                }
+                else if (i == 2)
+                {
+                    node = node.GetComponent<Node>().nextNode2;
+                }
+                else if (i == 3)
+                {
+                    node = node.GetComponent<Node>().nextNode3;
+                }
+            }
+
         }
     }
 
@@ -179,12 +244,13 @@ public class CarEngine : MonoBehaviour {
         {
             wheelFL.motorTorque = 0f;
             wheelFR.motorTorque = 0f;
+            Breaking();
         }
     }
 
     private void ApplySteer()
     {
-        Vector3 relativeVector = transform.InverseTransformPoint(nodes[currentNode].position);
+        Vector3 relativeVector = transform.InverseTransformPoint(node.transform.position);
         float newSteer = (relativeVector.x / relativeVector.magnitude) * maxSteerAngle;
         wheelFL.steerAngle = newSteer;
         wheelFR.steerAngle = newSteer;
