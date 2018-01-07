@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class cameraControllerScript : MonoBehaviour {
     public GameObject mainCamera;
+    public GameObject[] monitoringCameras;
 	// Use this for initialization
 	void Start () {
+        for (int i = 1; i < monitoringCameras.Length; i++)
+        {
+            monitoringCameras[i].SetActive(false);
+        }
+
         setDefaultCamera();
+        if (Input.GetButtonDown("n"))
+        {
+            
+        }
 	}
 	
 	// Update is called once per frame

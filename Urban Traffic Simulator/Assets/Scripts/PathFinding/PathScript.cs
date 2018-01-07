@@ -8,7 +8,14 @@ public class PathScript : MonoBehaviour {
     public GameObject startPoint;
 
     private List<Transform> nodes = new List<Transform>();
-
+    private void Start()
+    {
+        Node[] nodes2 = GetComponentsInChildren<Node>();
+        foreach (var item in nodes2)
+        {
+            item.GetComponentInChildren<MeshRenderer>().enabled = false;
+        }
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = lineColor;

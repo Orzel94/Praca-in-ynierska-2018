@@ -14,7 +14,7 @@ namespace RockVR.Video.Demo
 
         private void OnGUI()
         {
-            if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.NOT_START)
+            if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.NOT_START || VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.FINISH)
             {
                 if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Start Capture"))
                 {
@@ -50,35 +50,7 @@ namespace RockVR.Video.Demo
                     // Waiting processing end.
                 }
             }
-            else if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.FINISH)
-            {
-                if (!isPlayVideo)
-                {
-                    if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "View Video"))
-                    {
-#if UNITY_5_6_OR_NEWER
-                        // Set root folder.
-                        isPlayVideo = true;
-                        VideoPlayer.instance.SetRootFolder();
-                        // Play capture video.
-                        VideoPlayer.instance.PlayVideo();
-                    }
-                }
-                else
-                {
-                    if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Next Video"))
-                    {
-                        // Turn to next video.
-                        VideoPlayer.instance.NextVideo();
-                        // Play capture video.
-                        VideoPlayer.instance.PlayVideo();
-#else
-                        // Open video save directory.
-                        Process.Start(PathConfig.saveFolder);
-#endif
-                    }
-                }
-            }
+            
         }
     }
 }

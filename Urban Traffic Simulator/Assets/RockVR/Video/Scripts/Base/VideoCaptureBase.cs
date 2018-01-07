@@ -190,6 +190,8 @@ namespace RockVR.Video
         /// </summary>
         public enum TargetFramerateType
         {
+            _10,
+            _15,
             _18,
             _24,
             _30,
@@ -379,6 +381,8 @@ namespace RockVR.Video
         {
             get
             {
+                if (_targetFramerate == TargetFramerateType._10) { return 10; }
+                if (_targetFramerate == TargetFramerateType._15) { return 15; }
                 if (_targetFramerate == TargetFramerateType._18) { return 18; }
                 if (_targetFramerate == TargetFramerateType._24) { return 24; }
                 if (_targetFramerate == TargetFramerateType._30) { return 30; }
