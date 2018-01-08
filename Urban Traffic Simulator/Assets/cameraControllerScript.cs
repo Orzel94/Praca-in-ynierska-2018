@@ -30,15 +30,18 @@ public class cameraControllerScript : MonoBehaviour {
         {
             if (mainCamera != monitoringCameras[i])
             {
-                monitoringCameras[i].SetActive(false);
+                monitoringCameras[i].GetComponent<Camera>().enabled = false;
             }
 
         }
         foreach (var item in cameras)
         {
-            if (item != mainCamera.GetComponent<Camera>())
+            if (item != null)
             {
-                item.enabled = false;
+                if (item != mainCamera.GetComponent<Camera>())
+                {
+                    item.enabled = false;
+                }
             }
         }
        

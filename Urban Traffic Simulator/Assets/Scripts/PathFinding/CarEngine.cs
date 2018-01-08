@@ -94,9 +94,13 @@ public class CarEngine : MonoBehaviour {
         if (fpc.GetComponent<Camera>().enabled)
         {
             tpc.GetComponent<Camera>().enabled = true;
+            
             foreach (var item in cameras)
             {
-                item.enabled = false;
+                if (item!=null)
+                {
+                    item.enabled = false;
+                }
             }
         }
         else
