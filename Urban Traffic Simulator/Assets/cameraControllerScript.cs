@@ -67,7 +67,10 @@ public class cameraControllerScript : MonoBehaviour {
                 {
                     foreach (var pos in item.Value)
                     {
-                        sw.WriteLine(item.Key + " " + pos.x + " " + pos.y + " " + pos.z);
+                        if (pos.x < 1 && pos.x > 0 && pos.y < 1 && pos.y > 0)
+                        {
+                            sw.WriteLine(item.Key + " " + pos.x + " " + pos.y);
+                        }
                     }
                 }
                 sw.Close();
