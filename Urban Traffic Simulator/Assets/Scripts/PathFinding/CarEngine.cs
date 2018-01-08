@@ -56,7 +56,21 @@ public class CarEngine : MonoBehaviour {
 
 
         CheckWayPointDistance();
+        DestroyNotMoving();
 	}
+
+    private IEnumerator DestroyNotMoving()
+    {
+        if (currentSpeed==0)
+        {
+            yield return new WaitForSeconds(10);
+            if (currentSpeed == 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
     private void OnMouseDown()
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().enabled = false;
@@ -107,36 +121,40 @@ public class CarEngine : MonoBehaviour {
         sensorStartPosR += transform.right * frontSideSensorPosition;
         Boolean directFrontHit = false;
         //front center
-        if (Physics.Raycast(sensorStartPos, transform.forward,out hit, sensorLenght))
+        if (Physics.Raycast(sensorStartPos, transform.forward,out hit, sensorLenght/10))
         {
             Debug.DrawLine(sensorStartPos, hit.point);
             directFrontHit = true;
         }
         //front right side
-        if (Physics.Raycast(sensorStartPosR, transform.forward, out hit, sensorLenght))
+        if (Physics.Raycast(sensorStartPosR, transform.forward, out hit, sensorLenght/10))
         {
             Debug.DrawLine(sensorStartPosR, hit.point);
             directFrontHit = true;
         }
         //angle
-        if (Physics.Raycast(sensorStartPosR, Quaternion.AngleAxis(frontSensorAngle,transform.up)*transform.forward, out hit, sensorLenght))
+        if (Physics.Raycast(sensorStartPosR, Quaternion.AngleAxis(frontSensorAngle,transform.up)*transform.forward, out hit, sensorLenght/10))
         {
             Debug.DrawLine(sensorStartPosR, hit.point);
+            directFrontHit = true;
         }
         //front left side
         
-        if (Physics.Raycast(sensorStartPosL, transform.forward, out hit, sensorLenght))
+        if (Physics.Raycast(sensorStartPosL, transform.forward, out hit, sensorLenght/10))
         {
             Debug.DrawLine(sensorStartPosL, hit.point);
             directFrontHit = true;
         }
         //angle
-        if (Physics.Raycast(sensorStartPosL, Quaternion.AngleAxis(-frontSensorAngle, transform.up) * transform.forward, out hit, sensorLenght))
+        if (Physics.Raycast(sensorStartPosL, Quaternion.AngleAxis(-frontSensorAngle, transform.up) * transform.forward, out hit, sensorLenght/10))
         {
             Debug.DrawLine(sensorStartPosL, hit.point);
+            directFrontHit = true;
         }
         if (directFrontHit)
         {
+            stopCar();
+            currentSpeed = 0f;
             isBreaking = true;
         }
         else
@@ -144,6 +162,11 @@ public class CarEngine : MonoBehaviour {
             isBreaking = false;
         }
 
+    }
+
+    private void stopCar()
+    {
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
     private void CheckWayPointDistance()
@@ -234,6 +257,7 @@ public class CarEngine : MonoBehaviour {
     {
         wheelRL.brakeTorque = 0;
         wheelRR.brakeTorque = 0;
+        
         currentSpeed = 2f * Mathf.PI * wheelFL.radius * wheelFL.rpm * 60 / 1000;
         if (currentSpeed < maxSpeed)
         {
@@ -257,7 +281,7 @@ public class CarEngine : MonoBehaviour {
     }
     private void Breaking()
     {
-
+        
         wheelRL.brakeTorque = maxBreakingTorque;
         wheelRR.brakeTorque = maxBreakingTorque;
         wheelFL.motorTorque = 0f;

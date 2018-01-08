@@ -1,6 +1,6 @@
 WindowsStandalone
 305219260b0bad10e64a8b6a10bf52de Assembly-CSharp.dll:RockVR.Video.VideoCapture
-da000b7ee96df18855de1227cb748f0d Assembly-CSharp.dll:.cameraControllerScript
+505c0f31ca73a16546502e9d198738c6 Assembly-CSharp.dll:.cameraControllerScript
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
