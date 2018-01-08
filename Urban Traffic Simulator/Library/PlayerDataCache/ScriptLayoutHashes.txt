@@ -1,6 +1,6 @@
 WindowsStandalone
 305219260b0bad10e64a8b6a10bf52de Assembly-CSharp.dll:RockVR.Video.VideoCapture
-505c0f31ca73a16546502e9d198738c6 Assembly-CSharp.dll:.cameraControllerScript
+535b3eb8febab8afe452343ab9178095 Assembly-CSharp.dll:.cameraControllerScript
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -16,6 +16,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 3f90cef38d2a10ce173f088540b8b83f Assembly-CSharp.dll:RockVR.Video.VideoCaptureBase
 b4b718e3d7795ca6ba1e13693d4842ec Assembly-CSharp.dll:.CarEngine
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CaptureScript
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button

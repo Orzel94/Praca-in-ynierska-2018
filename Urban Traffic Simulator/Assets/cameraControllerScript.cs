@@ -1,27 +1,118 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class cameraControllerScript : MonoBehaviour {
     public GameObject mainCamera;
     public GameObject[] monitoringCameras;
     int currentCameraIndex;
-	// Use this for initialization
-	void Start () {
-
+    public string folder = "ScreenshotFolder";
+    public int frameRate = 20;
+    private Boolean capturing;
+    private Dictionary<int, List<Vector3>> carPositions=new Dictionary<int, List<Vector3>>();
+    public GameObject carFactory;
+    private Camera currentCamera;
+    // Use this for initialization
+    void Start () {
+        //myDocumentsPath + "/UrbanTraficSimulator/resultImages/";
+        string myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        Directory.CreateDirectory(myDocumentsPath + "/UrbanTraficSimulator/resultImages/");
+        folder = myDocumentsPath + "/UrbanTraficSimulator/resultImages/";
+        currentCamera = mainCamera.GetComponent<Camera>();
         currentCameraIndex = 0;
         setDefaultCamera(mainCamera);
+        capturing = false;
+
+        // Set the playback framerate (real time will not relate to game time after this).
+        Time.captureFramerate = frameRate;
+
+        // Create the folder
+        System.IO.Directory.CreateDirectory(folder);
+
+    }
+    void OnGUI()
+    {
+        if (!capturing)
+        {
+            if (GUILayout.Button("Start Capture"))
+                capturing = !capturing;
+        }
+        else
+        {
+            if (GUILayout.Button("Stop Capture"))
+            {
+                capturing = !capturing;
+                SaveData();
+            }
+                
+        }
         
+    }
+
+    private void SaveData()
+    {
+        //myDocumentsPath + "/UrbanTraficSimulator/resultImages/";
+        //string myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        //Directory.CreateDirectory(myDocumentsPath + "/UrbanTraficSimulator/resultImages/");
+        int tryCounter= 0;
+        while (true)
+        {
+            if (!File.Exists(folder + "\\results" + tryCounter.ToString() + ".txt"))
+            {
+                StreamWriter sw = File.CreateText(folder+"\\results"+tryCounter.ToString()+".txt");
+                foreach (var item in carPositions)
+                {
+                    foreach (var pos in item.Value)
+                    {
+                        sw.WriteLine(item.Key + " " + pos.x + " " + pos.y + " " + pos.z);
+                    }
+                }
+                sw.Close();
+                carPositions = new Dictionary<int, List<Vector3>>();
+                break;
+            }
+            else
+            {
+                tryCounter++;
+            }
+        }
+    }
+
+    void Awake()
+    {
+        Application.targetFrameRate = 20;
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (capturing)
+        {
+            // Append filename to folder name (format is '0005.png"')
+            string name = string.Format("{0}\\{1:D04}.png", folder, Time.frameCount);
+            TakeCarsPosition(Time.frameCount);
+            // Capture the screenshot to the specified file.
+            ScreenCapture.CaptureScreenshot(name);
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private void TakeCarsPosition(int frame)
+    {
+        List<Transform> cars = carFactory.GetComponentsInChildren<Transform>().Where(x => x.tag == "Player").ToList();
+
+        List<Vector3> positions = new List<Vector3>();
+        foreach (var item in cars)
+        {
+            positions.Add(currentCamera.WorldToViewportPoint(item.position));
+        }
+        carPositions.Add(frame, positions);
+    }
+
     void setDefaultCamera(GameObject mainCamera)
     {
-        
+        currentCamera = mainCamera.GetComponent<Camera>();
         Camera[] cameras = new Camera[200];
         Camera.GetAllCameras(cameras);
         mainCamera.SetActive(true);
