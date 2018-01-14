@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MotionDetectorV3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MotionDetectorV3_jar</output-path>
+    <root id="archive" name="MotionDetectorV3.jar">
+      <element id="module-output" name="MotionDetectorV3" />
+      <element id="extracted-dir" path="C:/OPENCV2/opencv/build/java/opencv-2413.jar" path-in-jar="/" />
+      <element id="file-copy" path="C:/OPENCV2/opencv/build/java/opencv-2413.jar" />
+    </root>
+  </artifact>
+</component>

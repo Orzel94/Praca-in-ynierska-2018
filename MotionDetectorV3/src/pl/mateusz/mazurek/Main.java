@@ -89,7 +89,7 @@ public class Main {
         result2=new Mat();
         result3=new Mat();
         System.out.println("Welcome to MotionDetector V3..... Let's start!");
-
+        System.out.println("Detecting files...");
         LoadFiles();
         for (String item : fileNames ) {
             System.out.println(item);
@@ -98,9 +98,13 @@ public class Main {
 
 
         ResultLoad();
+        System.out.println("Motion detecting...");
         Detect();
+        System.out.println("Saving results...");
         SaveResults();
+        System.out.println("Calculating accuracy...");
         TestResults();
+        System.out.println("All done! Check \"rsc\" directory for results.");
 
 
 
@@ -258,15 +262,9 @@ public class Main {
         Moments moment = Imgproc.moments(contours.get(j));
         double area = moment.get_m00();
         if (area>40) {
-            System.out.println("area: " + String.valueOf(area));
             x = (moment.get_m10() / area);
-            System.out.println("x: " + String.valueOf(x));
             y = (moment.get_m01() / area);
-            System.out.println("y: " + String.valueOf(y));
-            System.out.println("x1: " + String.valueOf(rect.x));
-            System.out.println("y1: " + String.valueOf(rect.y));
-            System.out.println("h1: " + String.valueOf(rect.height));
-            System.out.println("w1: " + String.valueOf(rect.width));
+
         }
         if(i==0){
             Scanner in = new Scanner(fileNames.get(i)).useDelimiter("[^0-9]+");
@@ -335,7 +333,6 @@ public class Main {
                 Highgui.imwrite("rsc\\maskRes.jpg",mask);*/
 
                 i++;
-                System.out.println("frame="+f+", x="+x+", y="+y+", x1="+x1+", y1="+y1);
             }
         }
         catch(Exception e){
@@ -354,7 +351,6 @@ public class Main {
     static void LoadFiles(){
         for (int i = 0; i < listOfFiles.length; i++) {
             if (listOfFiles[i].isFile()) {
-                System.out.println("File " + listOfFiles[i].getName());
                 char[] extension=new char[3];
                 listOfFiles[i].getName().getChars(listOfFiles[i].getName().length()-3,listOfFiles[i].getName().length(),extension,0);
                 if(String.valueOf(extension).equals("txt")){
@@ -364,7 +360,6 @@ public class Main {
                 }
 
             } else if (listOfFiles[i].isDirectory()) {
-                System.out.println("Directory " + listOfFiles[i].getName());
             }
         }
 
