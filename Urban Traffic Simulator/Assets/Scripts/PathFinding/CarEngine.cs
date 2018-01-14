@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CarEngine : MonoBehaviour {
+    public Transform carBody;
     public GameObject path;
     public float maxSteerAngle = 45f;
     public WheelCollider wheelFL;
@@ -39,6 +40,7 @@ public class CarEngine : MonoBehaviour {
         node = pathScript.startPoint;
         fpc.GetComponent<Camera>().enabled = false;
         tpc.GetComponent<Camera>().enabled = false;
+        //carBody = transform.Find("CarBody");
     }
 	
 	// Update is called once per frame
@@ -57,9 +59,37 @@ public class CarEngine : MonoBehaviour {
 
         CheckWayPointDistance();
         DestroyNotMoving();
-	}
+        
 
-    private IEnumerator DestroyNotMoving()
+	}
+    void OnDrawGizmosSelected()
+    {
+        Renderer rend = carBody.GetComponent<Renderer>();
+        float radius = rend.bounds.extents.magnitude;
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(rend.bounds.center,rend.bounds.extents*2);
+    }
+    public void getBoundingCoords(out int x, out int y, out float height, out float width)
+    {
+        x = 0;
+        y = 0;
+        height = 0;
+        width = 0;
+        Renderer rend = carBody.GetComponent<Renderer>();
+        Bounds b = rend.bounds;
+        Camera cam = Camera.main;
+        Vector3 pt = new Vector3();
+        float margin = 0f;
+
+        //The object is behind us
+        if (cam.WorldToScreenPoint(b.center).z < 0) return;
+
+        //All 8 vertices of the bounds
+        pt = cam.WorldToScreenPoint(new Vector3(b.center.x + b.extents.x, b.center.y + b.extents.y, b.center.z + b.extents.z));
+
+
+    }
+        private IEnumerator DestroyNotMoving()
     {
         if (currentSpeed==0)
         {

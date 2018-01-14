@@ -12,7 +12,7 @@ public class cameraControllerScript : MonoBehaviour {
     public string folder = "ScreenshotFolder";
     public int frameRate = 20;
     private Boolean capturing;
-    private Dictionary<int, List<Vector3>> carPositions=new Dictionary<int, List<Vector3>>();
+    private Dictionary<int, List<Vector4>> carPositions=new Dictionary<int, List<Vector4>>();
     public GameObject carFactory;
     private Camera currentCamera;
     // Use this for initialization
@@ -67,14 +67,14 @@ public class cameraControllerScript : MonoBehaviour {
                 {
                     foreach (var pos in item.Value)
                     {
-                        if (pos.x < 1 && pos.x > 0 && pos.y < 1 && pos.y > 0)
+                        if (pos.x < Screen.width && pos.x > 0 && pos.y < Screen.height && pos.y > 0 && pos.z < Screen.width && pos.z > 0 && pos.w < Screen.height && pos.w > 0)
                         {
-                            sw.WriteLine(item.Key + " " + pos.x + " " + pos.y);
+                            sw.WriteLine(item.Key + " " + (int)pos.x + " " + (int)(Screen.height - pos.y) + " " + (int)pos.z + " " + (int)(Screen.height - pos.w));
                         }
                     }
                 }
                 sw.Close();
-                carPositions = new Dictionary<int, List<Vector3>>();
+                carPositions = new Dictionary<int, List<Vector4>>();
                 break;
             }
             else
@@ -105,10 +105,30 @@ public class cameraControllerScript : MonoBehaviour {
     {
         List<Transform> cars = carFactory.GetComponentsInChildren<Transform>().Where(x => x.tag == "Player").ToList();
 
-        List<Vector3> positions = new List<Vector3>();
+        List<Vector4> positions = new List<Vector4>();
         foreach (var item in cars)
         {
-            positions.Add(currentCamera.WorldToViewportPoint(item.position));
+            //positions.Add(currentCamera..WorldToScreenPoint(new Vector3(b.center.x + b.extents.x, b.center.y + b.extents.y, b.center.z + b.extents.z)););
+            Transform carBody = item.GetComponent<CarEngine>().carBody;
+            Renderer rend = carBody.GetComponent<Renderer>();
+            Bounds b = rend.bounds;
+            Vector3 screenPos = currentCamera.WorldToScreenPoint(new Vector3(b.center.x - 2*b.extents.x, b.center.y - b.extents.y, b.center.z - b.extents.z));
+            Vector3 screenPos2 = currentCamera.WorldToScreenPoint(new Vector3(b.center.x + 2*b.extents.x, b.center.y + b.extents.y, b.center.z + b.extents.z));
+            if (screenPos.x > screenPos2.x)
+            {
+                float tmp = screenPos.x;
+                screenPos.x = screenPos2.x;
+                screenPos2.x = tmp;
+            }
+            if (screenPos.y > screenPos2.y)
+            {
+                float tmp = screenPos.y;
+                screenPos.y = screenPos2.y;
+                screenPos2.y = tmp;
+            }
+            positions.Add(new Vector4(screenPos.x, screenPos.y, screenPos2.x, screenPos2.y));
+
+
         }
         carPositions.Add(frame, positions);
     }

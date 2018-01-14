@@ -945,9 +945,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114136711419479612, guid: 51d784e5212dd1745afd1ce42fe6a570,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 26222367}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51d784e5212dd1745afd1ce42fe6a570, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &26222367 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4903447676413074, guid: 51d784e5212dd1745afd1ce42fe6a570,
+    type: 2}
+  m_PrefabInternal: {fileID: 26222366}
 --- !u!1001 &34679319
 Prefab:
   m_ObjectHideFlags: 0
@@ -16927,9 +16937,23 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1049633168290660, guid: c1fae5a734f9f66409f048b5aaf421ba, type: 2}
+      propertyPath: m_Name
+      value: CarBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705608598708742, guid: c1fae5a734f9f66409f048b5aaf421ba,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 504777659}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1fae5a734f9f66409f048b5aaf421ba, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &504777659 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4942836129044366, guid: c1fae5a734f9f66409f048b5aaf421ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 504777658}
 --- !u!1 &510753698
 GameObject:
   m_ObjectHideFlags: 0
@@ -24377,9 +24401,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114442172446877916, guid: 366653f334400134f940a17154bc88df,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 713305564}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 366653f334400134f940a17154bc88df, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &713305564 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4709541057424650, guid: 366653f334400134f940a17154bc88df,
+    type: 2}
+  m_PrefabInternal: {fileID: 713305563}
 --- !u!1 &714705749
 GameObject:
   m_ObjectHideFlags: 0
@@ -46535,9 +46569,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114846636812076070, guid: 2ac47e79cede9204b8349024f64f9872,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 1454370952}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ac47e79cede9204b8349024f64f9872, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1454370952 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4344837494640154, guid: 2ac47e79cede9204b8349024f64f9872,
+    type: 2}
+  m_PrefabInternal: {fileID: 1454370951}
 --- !u!1 &1454877788
 GameObject:
   m_ObjectHideFlags: 0
@@ -50068,9 +50112,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114519894173419656, guid: 037dc9116ce1c314ba6bd31bca9718e0,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 1558758791}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 037dc9116ce1c314ba6bd31bca9718e0, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1558758791 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4322647472647284, guid: 037dc9116ce1c314ba6bd31bca9718e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1558758790}
 --- !u!1 &1558991089
 GameObject:
   m_ObjectHideFlags: 0
@@ -53654,9 +53708,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114546714725463998, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 1645467802}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1645467802 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4783082515746210, guid: 1ba9aa2f81210b845ae3f8b14bd5c36f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1645467801}
 --- !u!1001 &1647468609
 Prefab:
   m_ObjectHideFlags: 0
@@ -55821,9 +55885,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114630840387224966, guid: f90d5b1a57b87594e81f764ef57e454a,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 1734618660}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f90d5b1a57b87594e81f764ef57e454a, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1734618660 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4791287032250836, guid: f90d5b1a57b87594e81f764ef57e454a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1734618659}
 --- !u!1 &1734806342
 GameObject:
   m_ObjectHideFlags: 0
@@ -65103,9 +65177,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114854900751898338, guid: 4d786cb56906cb24dabdf002e2fdea12,
+        type: 2}
+      propertyPath: carBody
+      value: 
+      objectReference: {fileID: 2059943936}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d786cb56906cb24dabdf002e2fdea12, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2059943936 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4956199681533948, guid: 4d786cb56906cb24dabdf002e2fdea12,
+    type: 2}
+  m_PrefabInternal: {fileID: 2059943935}
 --- !u!1 &2061600594
 GameObject:
   m_ObjectHideFlags: 0
