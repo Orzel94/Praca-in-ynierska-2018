@@ -91,12 +91,6 @@ public class Main {
         System.out.println("Welcome to MotionDetector V3..... Let's start!");
         System.out.println("Detecting files...");
         LoadFiles();
-        for (String item : fileNames ) {
-            System.out.println(item);
-        }
-
-
-
         ResultLoad();
         System.out.println("Motion detecting...");
         Detect();
