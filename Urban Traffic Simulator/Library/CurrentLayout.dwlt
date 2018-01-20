@@ -38,7 +38,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 460
-    width: 1039
+    width: 1037
     height: 271
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
@@ -66,7 +66,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 222
     y: 0
-    width: 1039
+    width: 1037
     height: 731
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 69
+  controlID: 120
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1261
+    x: 1259
     y: 0
-    width: 275
+    width: 277
     height: 731
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -228,7 +228,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1261
+    width: 1259
     height: 731
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
@@ -250,7 +250,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1039
+    width: 1037
     height: 460
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -285,7 +285,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 224
     y: 552
-    width: 1035
+    width: 1033
     height: 250
   m_SearchFilter:
     m_NameFilter: 
@@ -299,19 +299,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\mateu\\Documents\\In\u017Cynierka\\Urban Traffic
     Simulator"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 395}
-    m_SelectedIDs: 6c300000
-    m_LastClickedID: 12396
+    m_SelectedIDs: 6e390000
+    m_LastClickedID: 14702
     m_ExpandedIDs: 0000000072260000802600003a290000602a0000e02a0000982b0000022d0000c02f0000743000006e3100008c320000d4330000f03300004a3900006e390000b43e00001c3f0000de400000e240000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000072260000802600008e2600003a290000602a0000e02a0000982b0000022d0000c02f000074300000803000006e3100008c320000d4330000f03300004a3900006e390000b43e00001c3f0000de400000e2400000
+    m_ExpandedIDs: 0000000072260000802600003a290000602a0000e02a0000982b0000022d0000c02f0000743000006e3100008c320000d4330000f03300004a3900006e390000b43e00001c3f0000de400000e2400000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -384,7 +384,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -443,9 +443,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1263
+    x: 1261
     y: 92
-    width: 273
+    width: 275
     height: 710
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
@@ -482,9 +482,9 @@ MonoBehaviour:
     height: 710
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e830000
-    m_LastClickedID: 33566
-    m_ExpandedIDs: 328cffff2c8dffff2e8dffffe295ffffdac5ffff50deffff1afcffff0000000084640000f0640000066a0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ea06fdffb607fdffea08fdffea2efdffb62ffdffea30fdff0c8dffff96c1ffffe6c7ffffded8ffff1afcffff0000000004470000ee570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
   m_ExpandedScenes:
-  - Car concept
+  - 10 cars
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -531,17 +531,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 224
     y: 92
-    width: 1035
+    width: 1033
     height: 439
   m_SceneLighting: 1
-  lastFramingTime: 371.36290491765857
+  lastFramingTime: 349.4242680771959
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 300.22684, y: 55.007698, z: 59.939095}
+    m_Target: {x: 341.58878, y: -61.21986, z: 275.64523}
     speed: 2
-    m_Value: {x: 300.22684, y: 55.007698, z: 59.939095}
+    m_Value: {x: 341.58878, y: -61.21986, z: 275.64523}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -564,13 +564,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.32197243, y: -0.04012199, z: 0.013672862, w: -0.9457997}
+    m_Target: {x: -0.27632952, y: -0.03064863, z: 0.008831178, w: -0.9605335}
     speed: 2
-    m_Value: {x: -0.32197243, y: -0.04012199, z: 0.013672862, w: -0.9457997}
+    m_Value: {x: -0.27632955, y: -0.030648632, z: 0.008831179, w: -0.96053356}
   m_Size:
-    m_Target: 57.29937
+    m_Target: 272.3428
     speed: 2
-    m_Value: 57.29937
+    m_Value: 272.3428
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -605,7 +605,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 224
     y: 92
-    width: 1035
+    width: 1033
     height: 439
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -635,25 +635,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1035
+      width: 1033
       height: 422
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 517.5, y: 211}
+    m_Translation: {x: 516.5, y: 211}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -517.5
+      x: -516.5
       y: -211
-      width: 1035
+      width: 1033
       height: 422
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1035, y: 439}
+  m_LastWindowPixelSize: {x: 1033, y: 439}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100

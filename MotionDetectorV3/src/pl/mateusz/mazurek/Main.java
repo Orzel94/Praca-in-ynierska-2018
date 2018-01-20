@@ -252,10 +252,10 @@ public class Main {
     private static Integer getDetectionCoords(ArrayList<MatOfPoint> contours, int j, int i,Integer detectionIndex) {
         Double x=0.0;
         Double y=0.0;
-        Rect rect = Imgproc.boundingRect(contours.get(0));
+        Rect rect = Imgproc.boundingRect(contours.get(j));
         Moments moment = Imgproc.moments(contours.get(j));
         double area = moment.get_m00();
-        if (area>40) {
+        if (area>10) {
             x = (moment.get_m10() / area);
             y = (moment.get_m01() / area);
 
@@ -322,9 +322,9 @@ public class Main {
                 Point p3= new Point(x1,y1);
                 MatOfPoint points = new MatOfPoint(p,p1,p2,p3);
                 Rect rect = Imgproc.boundingRect(points);
-                image1=Highgui.imread("rsc\\0403.png");
-                Mat mask = new Mat(image1,rect);
-                Highgui.imwrite("rsc\\maskRes.jpg",mask);
+                //image1=Highgui.imread("rsc\\0403.png");
+                //Mat mask = new Mat(image1,rect);
+                //Highgui.imwrite("rsc\\maskRes.jpg",mask);
 
                 i++;
             }

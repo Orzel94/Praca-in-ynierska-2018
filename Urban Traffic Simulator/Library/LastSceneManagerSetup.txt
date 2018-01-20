@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Car concept.unity
+- path: Assets/Scenes/10 cars.unity
   isLoaded: 1
   isActive: 1
