@@ -320,11 +320,11 @@ public class Main {
                 Point p1= new Point(x1,y);
                 Point p2= new Point(x,y1);
                 Point p3= new Point(x1,y1);
-               /* MatOfPoint points = new MatOfPoint(p,p1,p2,p3);
+                MatOfPoint points = new MatOfPoint(p,p1,p2,p3);
                 Rect rect = Imgproc.boundingRect(points);
-                image1=Highgui.imread("rsc\\0694.png");
+                image1=Highgui.imread("rsc\\0403.png");
                 Mat mask = new Mat(image1,rect);
-                Highgui.imwrite("rsc\\maskRes.jpg",mask);*/
+                Highgui.imwrite("rsc\\maskRes.jpg",mask);
 
                 i++;
             }

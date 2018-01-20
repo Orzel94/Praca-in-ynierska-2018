@@ -1,0 +1,19 @@
+Instrukcja obsługi
+
+Urban Traffic Simulator
+1. Uruchomić  aplikacje (wybrać rozdzielczość i zaznaczyć opcję "Windowed")
+2. Po chwili na makiecie zaczną pojawiać się pojazdy
+3. Kliknięcie na przycisk w lewym górnym rogu ekranu spowoduje rozpoczęcie przechwytywania obrazu, ponowne kliknięcie spowoduje zapisanie wyników w folderze z użytkownik/Dokumenty/UrbanTrafficSimulator (zrzuty ekranu i plik tekstowy z tablicą prawdy)
+
+sterowanie:
+N - zmiana kamery monitoringu
+M - powrót do głównej kamery
+LPM na pojeździe - przejęcie w tryb kamery pierwszo/trzecioosobowej
+C - przełączenie między kamerą pierwszo i trzecioosobową
+
+Motion Detector V3
+Przenieść zrzuty ekranu wraz z tablicą prawdy do folderu z plikiem jar. do podfolderu o nazwie "rsc"
+2.Uruchomić z konsoli plik MotionDetectorV3.jar poleceniem:
+	java -Djava.library.path=opencvdir -jar MotionDetectorV3.jar
+	gdzie opencvdir to katalog zawierający bibliotekę opencv_java2413.dll (można podać inną ścieżkę)
+3. wyniki detekcji i klasyfikatory zostaną automatycznie zapisane w katalogu "rsc"
