@@ -55,7 +55,8 @@ public class Main {
     static int FN=0;
     static ArrayList<ArrayList<Integer>> fileResults=new ArrayList<>();
     static ArrayList<ArrayList<Integer>> detections=new ArrayList<>();
-
+    static int erodeIntensity=0;
+    static int dilateIntensity=0;
     String frame1;
     String frame2;
 
@@ -88,6 +89,20 @@ public class Main {
         result1=new Mat();
         result2=new Mat();
         result3=new Mat();
+/*
+        Mat image1=Highgui.imread("rsc\\0403.png");
+
+        Highgui.imwrite("rsc\\noise.jpg",image1);
+
+        Highgui.imwrite("rsc\\erode.jpg",image1);
+
+        Highgui.imwrite("rsc\\dilate.jpg",image1);
+
+
+        erode(result1,result2,getStructuringElement(MORPH_RECT,new Size(1,1)));
+        dilate(result2,result3,getStructuringElement(MORPH_RECT,new Size(40,40)));
+*/
+
         System.out.println("Welcome to MotionDetector V3..... Let's start!");
         System.out.println("Detecting files...");
         LoadFiles();
@@ -189,8 +204,9 @@ public class Main {
 
                     if(match){
                         TP++;
-                        //it.remove();
+                        it.remove();
                         it1.remove();
+                        break;
                     }
                 }
 
@@ -283,7 +299,7 @@ public class Main {
             detections.get(detectionIndex).add(rect.y);
             detections.get(detectionIndex).add(rect.height);
             detections.get(detectionIndex).add(rect.width);
-        }else{
+        }else if(rect.x!=1&&rect.y!=1){
             Scanner in = new Scanner(fileNames.get(i+1)).useDelimiter("[^0-9]+");
             int integer = in.nextInt();
             detections.add(new ArrayList<>());
